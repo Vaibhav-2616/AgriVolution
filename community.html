@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AGRIVOLUTION — Community</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" onclick="location.href='index.html'"><div class="logo-circle">🌱</div><h1>AGRIVOLUTION</h1></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="community.html" class="active">Community</a>
+        <a href="learning.html">Learning Hub</a>
+        <a href="mandi.html">Mandi Locator</a>
+        <a href="auth.html" style="background:transparent;border:1px solid rgba(47,142,68,0.12);padding:8px 12px;border-radius:8px;color:var(--primary)">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" style="max-width:900px">
+      <div class="card" style="margin-bottom:18px">
+        <form id="post-form" style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:44px"><img src="https://i.pravatar.cc/150?u=you" style="width:44px;height:44px;border-radius:999px"/></div>
+          <div style="flex:1">
+            <textarea id="post-text" placeholder="Share your farming story..." style="width:100%;height:80px;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.05)"></textarea>
+            <div style="display:flex;justify-content:flex-end;margin-top:8px"><button class="btn btn-primary" type="submit">Post</button></div>
+          </div>
+        </form>
+      </div>
+
+      <h2 style="margin:0 0 12px">Community Feed</h2>
+
+      <div id="community-grid" class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+        <!-- posts here -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" style="margin-top:40px">
+    <div class="container footer-grid">
+      <div><div style="display:flex;gap:10px;align-items:center"><div class="logo-circle">🌱</div><strong>AGRIVOLUTION</strong></div><p style="color:var(--muted);margin-top:10px">Community for farmers.</p></div>
+      <div><h4>Platform</h4><div style="color:var(--muted)"><a href="marketplace.html">Marketplace</a><br/><a href="community.html">Community</a></div></div>
+      <div><h4>Support</h4><div style="color:var(--muted)"><a href="#">Help</a></div></div>
+      <div><h4>Legal</h4><div style="color:var(--muted)"><a href="#">TOS</a></div></div>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chat-btn" class="chat-btn">💬</button>
+  <div id="chat-window" class="chat-window" style="display:none">
+    <div class="chat-header">
+      <div style="display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1542293787938-c9e299b8808b?auto=format&fit=crop&w=120&q=80" style="width:36px;height:36px;border-radius:8px"/><strong>Arnak AI</strong></div>
+      <div style="display:flex;gap:8px;align-items:center"><button id="chat-close" style="background:transparent;border:0;color:white;font-size:20px;cursor:pointer">✕</button></div>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <div class="chat-input">
+      <input id="chat-input" placeholder="Ask about crops..." />
+      <button id="chat-send" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

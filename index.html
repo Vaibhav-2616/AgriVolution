@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AGRIVOLUTION — Home</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand" onclick="location.href='index.html'">
+        <div class="logo-circle">🌱</div>
+        <h1>AGRIVOLUTION</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="marketplace.html" data-i18n="nav.marketplace">Marketplace</a>
+        <a href="community.html" data-i18n="nav.community">Community</a>
+        <a href="learning.html" data-i18n="nav.learning">Learning Hub</a>
+        <a href="mandi.html" data-i18n="nav.mandi">Mandi Locator</a>
+        <a href="auth.html" data-i18n="nav.signin" style="background:transparent;border:1px solid rgba(47,142,68,0.12);padding:8px 12px;border-radius:8px;color:var(--primary)">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/pexels-clickon38-30851646.jpg" alt="hero"/>
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-badge"><span class="dot"></span> <span data-i18n="hero.badge">Future of Farming is Here</span></div>
+        <h2 class="hero-title" data-i18n="hero.title">Cultivating <span class="accent">Prosperity</span> Together</h2>
+        <p class="hero-lead" data-i18n="hero.lead">Join India's smartest agriculture platform. Connect with buyers, get AI-powered crop advice, and track real-time mandi prices.</p>
+        <div style="display:flex;gap:12px">
+          <button class="btn btn-primary" data-i18n="btn.explore" onclick="location.href='marketplace.html'">Explore Marketplace</button>
+          <button class="btn btn-outline" data-i18n="btn.join" onclick="location.href='auth.html'">Join Community</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prices & quick stats -->
+    <section class="section">
+      <div class="container grid grid-2" style="align-items:start">
+        <div class="card">
+          <h3 style="margin:0 0 10px;font-size:20px" data-i18n="prices.title">Mandi Prices Today</h3>
+          <p style="color:var(--muted);margin:0 0 12px" data-i18n="prices.subtitle">Daily average prices from local markets</p>
+          <div id="price-chart" class="price-chart" style="margin-bottom:12px">Price chart</div>
+          <div id="price-container" class="price-list"></div>
+        </div>
+
+        <div class="card" style="display:flex;flex-direction:column;justify-content:center">
+          <h3 style="margin:0 0 8px;font-size:20px" data-i18n="why.title">Why AGRIVOLUTION?</h3>
+          <ul style="padding-left:16px;color:var(--muted);margin-top:8px">
+            <li data-i18n="why.secure"><strong>Secure Payments</strong> — Direct bank transfers with escrow protection.</li>
+            <li style="margin-top:8px" data-i18n="why.rates"><strong>Best Market Rates</strong> — Real-time mandi data to help you sell better.</li>
+            <li style="margin-top:8px" data-i18n="why.ai"><strong>AI Advisory</strong> — Instant crop diagnosis and farming tips.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-accent">
+      <div class="container grid grid-2" style="align-items:center">
+        <div>
+          <img class="feature-img" src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1200&q=80" alt="fresh veg" />
+          <div class="feature-quote" style="margin-top:14px">
+            <div style="font-weight:800">"My income increased by 40% after using AGRIVOLUTION marketplace."</div>
+            <div style="font-size:13px;color:var(--muted);margin-top:6px">— Ram Lal, Madhya Pradesh</div>
+          </div>
+        </div>
+        <div>
+          <h2 style="font-family:Georgia,serif;font-size:36px;margin:0 0 12px" data-i18n="features.title">Direct from Farm<br/>to Table</h2>
+          <p style="color:var(--muted);max-width:520px">Eliminate middlemen and get the best price for your hard work. Our marketplace connects you directly with bulk buyers, retailers, and consumers. List your produce in seconds.</p>
+          <div style="margin-top:16px">
+            <button class="btn btn-primary" data-i18n="btn.startSelling" onclick="location.href='marketplace.html'">Start Selling →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community teaser -->
+    <section class="section">
+      <div class="container grid grid-2" style="align-items:center">
+        <div class="community-teaser">
+          <h2 class="community-title" data-i18n="community.title">A Community That Grows Together</h2>
+          <p class="community-lead" data-i18n="community.lead">Farming doesn't have to be lonely. Join thousands of farmers sharing stories, tips, and daily wins — ask questions, get reliable advice, and celebrate harvests together. Learn, trade, and grow as a community.</p>
+          <ul class="community-highlights">
+            <li data-i18n="community.li1">🤝 Peer-led discussions & real farmer experiences</li>
+            <li data-i18n="community.li2">📈 Market tips and mandi price insights</li>
+            <li data-i18n="community.li3">🛠️ Practical how-tos and local best practices</li>
+          </ul>
+          <div class="community-cta"><button class="btn btn-outline" data-i18n="btn.join" onclick="location.href='community.html'">Join the Conversation →</button></div>
+        </div>
+        <div id="community-teasers"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="logo-circle">🌱</div>
+          <div>
+            <strong style="font-size:16px">AGRIVOLUTION</strong>
+            <div style="font-size:13px;color:var(--muted);margin-top:6px" data-i18n="footer.about">Empowering farmers with technology, community, and market access.</div>
+          </div>
+        </div>
+        <div class="socials" style="margin-top:14px">
+          <a href="#" aria-label="Facebook" class="social"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.07C22 6.48 17.52 2 11.93 2 6.35 2 2 6.48 2 12.07 2 17.1 5.66 21.2 10.44 22v-7.01H8.08v-2.92h2.36V9.09c0-2.33 1.39-3.61 3.51-3.61 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.16 0-1.52.72-1.52 1.46v1.75h2.59l-.41 2.92h-2.18V22C18.34 21.2 22 17.1 22 12.07z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Twitter" class="social"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.92c-.63.28-1.3.47-2.01.56.72-.43 1.27-1.12 1.53-1.94-.67.4-1.41.68-2.2.84C18.9 4.5 18 4 17 4c-1.73 0-3.13 1.4-3.13 3.12 0 .25.03.5.08.73C10.28 8.66 7 6.9 4.77 4.08c-.28.48-.44 1.03-.44 1.62 0 1.12.57 2.11 1.44 2.69-.53-.02-1.03-.16-1.46-.4v.04c0 1.56 1.11 2.86 2.58 3.16-.27.08-.56.12-.85.12-.21 0-.42-.02-.62-.06.42 1.3 1.64 2.25 3.09 2.28C7.5 16.6 6 17.1 4.36 17.1c-.28 0-.56-.02-.83-.05 1.55.99 3.4 1.57 5.39 1.57 6.47 0 10.01-5.36 10.01-10.01v-.46c.69-.5 1.28-1.12 1.75-1.82-.64.29-1.32.49-2.03.58z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Instagram" class="social"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.2a4.8 4.8 0 100 9.6 4.8 4.8 0 000-9.6zM18.4 6.6a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn" class="social"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.9 17H6.5v-6h2.4v6zM7.7 9.7a1.4 1.4 0 110-2.8 1.4 1.4 0 010 2.8zM18 17h-2.4v-3c0-.7 0-1.6-1-1.6-.99 0-1.15.78-1.15 1.58V17H10v-6h2.3v.82c.32-.6 1.1-1.2 2.1-1.2 2.23 0 2.6 1.47 2.6 3.38V17z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.platform">Platform</h4>
+        <ul>
+          <li><a href="marketplace.html">Marketplace</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="learning.html">Learning Hub</a></li>
+          <li><a href="mandi.html">Mandi Locator</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.support">Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Safety</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.legal">Legal & Contact</h4>
+        <ul>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+        <div style="margin-top:12px">
+          <div style="font-size:13px;color:var(--muted)">Email</div>
+          <a href="mailto:hello@agrivolution.example" data-i18n-email>hello@agrivolution.example</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="left">© 2025 AGRIVOLUTION. All rights reserved.</div>
+        <div class="right" style="display:flex;gap:12px;align-items:center">
+          <a href="#" style="color:var(--muted);text-decoration:none" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" style="color:var(--muted);text-decoration:none" data-i18n="footer.terms">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button id="chat-btn" class="chat-btn">💬</button>
+  <div id="chat-window" class="chat-window" style="display:none">
+    <div class="chat-header">
+      <div style="display:flex;gap:10px;align-items:center"><img src="https://images.unsplash.com/photo-1542293787938-c9e299b8808b?auto=format&fit=crop&w=120&q=80" style="width:36px;height:36px;border-radius:8px"/><strong>Arnak AI</strong></div>
+      <div style="display:flex;gap:8px;align-items:center"><button id="chat-close" style="background:transparent;border:0;color:white;font-size:20px;cursor:pointer">✕</button></div>
+    </div>
+    <div id="chat-body" class="chat-body"></div>
+    <div class="chat-input">
+      <input id="chat-input" data-i18n-placeholder="chat.placeholder" />
+      <button id="chat-send" class="btn btn-primary" data-i18n="btn.send">Send</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
